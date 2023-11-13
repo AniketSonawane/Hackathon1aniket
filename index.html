@@ -1,0 +1,73 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ServiceNow Incidents</title>
+</head>
+<body>
+    <div class="container">
+        <div class="side-by-side">
+            <div class="left-pane">
+                <div class="info-box">
+                    <div class="label">Bold Text:</div>
+                    <div class="content bold-text" contenteditable="true">Enter bold text</div>
+                </div>
+                <div class="info-box">
+                    <div class="label">Normal Text:</div>
+                    <div class="content normal-text" contenteditable="true">Enter normal text</div>
+                </div>
+                <div class="info-box">
+                    <div class="label">Bold Text:</div>
+                    <div class="content bold-text" contenteditable="true">Enter bold text</div>
+                </div>
+                <div class="info-box">
+                    <div class="label">Normal Text:</div>
+                    <div class="content normal-text" contenteditable="true">Enter normal text</div>
+                </div>
+                
+            </div>
+            <div class="right-pane">
+                <div class="gauge">
+                    <div class="label">Correctness</div>
+                    <div class="progress" id="correctnessGauge"></div>
+                </div>
+                <div class="gauge">
+                    <div class="label">Completeness</div>
+                    <div class="progress" id="completenessGauge"></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- bottom paine which is dynamic -->
+    <div class="bottom-pane">
+        <div class="triggers">
+            <button id="cmdbHealthTrigger">CMDB Health</button>
+            <button id="cmdbScorecardTrigger">CMDB Scorecard</button>
+</div>
+
+        <div class="chart-container"></div>
+
+        <div class="cmdb-scorecard-content">
+            <div class="pie-chart-container">
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="table-container" id="scorecardTableContainer"></div>
+        </div>
+
+        
+
+
+        
+    </div>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
